@@ -16,8 +16,6 @@ public class Order {
             if (amount>=199){
                 return amount;
             }
-        }else {
-            return amount + delivery.price;
         }
         return amount + delivery.price;
     }
