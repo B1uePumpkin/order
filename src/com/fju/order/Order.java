@@ -12,6 +12,13 @@ public class Order {
         shipFeed=this.delivery.price;
     }
     public int total(){
-        return amount+delivery.price;
+        if (delivery instanceof ShopeeDelivery){
+            if (amount>=199){
+                return amount;
+            }
+        }else {
+            return amount + delivery.price;
+        }
+        return amount + delivery.price;
     }
 }
